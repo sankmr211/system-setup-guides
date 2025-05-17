@@ -1,6 +1,6 @@
 # 🐰 RabbitMQ 4.1.0 Installation & Uninstallation Guide (Ubuntu)
 
-This repository provides scripts and instructions to **install** or **fully uninstall** RabbitMQ 4.1.0 on **Ubuntu** using the official Cloudsmith APT repository (as per RabbitMQ 3.13+ documentation).
+This repository provides scripts and instructions to **install** or **fully uninstall** RabbitMQ 4.1.0 on **Ubuntu** using the official Cloudsmith APT repository.
 
 ---
 

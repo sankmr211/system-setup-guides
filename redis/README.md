@@ -6,6 +6,14 @@ This guide provides instructions to install and fully remove **Redis** on Ubuntu
 
 ## 📦 Redis Installation
 
+## ✅ Prerequisites
+
+- Ubuntu 20.04, 22.04, or newer
+- `sudo` privileges
+- Internet connection
+
+---
+
 ### 1. Add Redis GPG Key
 
 ```bash
