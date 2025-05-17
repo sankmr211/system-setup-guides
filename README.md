@@ -27,29 +27,3 @@ This repository contains **installation, configuration, and uninstallation scrip
 
 ---
 
-### 🐘 [PostgreSQL](./postgres/)
-
-- Install PostgreSQL with common extensions
-- Configure system service and users
-- Full uninstall cleanup steps
-
-➡️ See: [`postgres/README.md`](./postgres/README.md)
-
----
-
-## 🧰 Usage
-
-Each directory contains:
-
-- A `setup.sh` or `service.sh` script (e.g., `rabbitmq.sh`)
-- A `README.md` file with:
-  - Step-by-step install instructions
-  - Service management tips
-  - Uninstallation and cleanup
-
-You can run a script directly like this:
-
-```bash
-cd rabbitmq
-chmod +x rabbitmq.sh
-./rabbitmq.sh

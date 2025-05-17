@@ -18,7 +18,7 @@ This repository provides scripts and instructions to **install** or **fully unin
 
 ### 📜 Install using Quick Start Script
 
-> The installation script is based on [RabbitMQ's official guide](https://www.rabbitmq.com/docs/3.13/install-debian#apt-cloudsmith).
+> The installation script is based on [RabbitMQ's official guide](https://www.rabbitmq.com/docs/install-debian).
 
 1. Download and execute the script:
 
@@ -117,21 +117,8 @@ Unit rabbitmq-server.service could not be found.
 
 ## 📚 References
 
-* [RabbitMQ Official Installation Guide (3.13+)](https://www.rabbitmq.com/docs/3.13/install-debian)
+* [RabbitMQ Official Installation Guide (4.1.0)](https://www.rabbitmq.com/docs/install-debian)
 * [RabbitMQ GitHub](https://github.com/rabbitmq)
 * [Erlang Solutions](https://www.erlang-solutions.com/resources/download.html)
 
 ---
-
-## 📝 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
-```
-
----
-
-### ✅ Optional: Include `rabbitmq.sh`
-
-Let me know if you want me to generate the `rabbitmq.sh` script referenced in this README so it’s a fully working repository.
-```
