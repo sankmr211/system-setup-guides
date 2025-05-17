@@ -4,17 +4,7 @@ This repository provides scripts and instructions to **install** or **fully unin
 
 ---
 
-## 📁 Contents
 
-- [Prerequisites](#prerequisites)
-- [Installation (RabbitMQ 4.1.0)](#installation-rabbitmq-410)
-  - [Install using Quick Start Script](#install-using-quick-start-script)
-  - [Enable RabbitMQ Management Plugin](#enable-rabbitmq-management-plugin)
-- [Uninstallation (Complete Cleanup)](#uninstallation-complete-cleanup)
-- [Verification](#verification)
-- [References](#references)
-
----
 
 ## ✅ Prerequisites
 
