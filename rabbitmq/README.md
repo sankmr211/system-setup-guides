@@ -25,6 +25,7 @@ This repository provides scripts and instructions to **install** or **fully unin
 ```bash
 chmod +x rabbitmq.sh
 ./rabbitmq.sh
+```
 
 2. Verify RabbitMQ is running:
 
