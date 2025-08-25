@@ -25,5 +25,21 @@ This repository contains **installation, configuration, and uninstallation scrip
 
 ➡️ See: [`redis/README.md`](./redis/README.md)
 
+
+## 📁 Ubuntu desktop
+
+### 🧠 [hardinfo](./ubuntu_desktop/)
+
+1. Comprehensive reports on hardware
+2. Generate HTML reports on your system's hardware
+3. Benchmark and compare your system.
+
+➡️ See: [`hardinfo/README.md`](./ubuntu_desktop/README.md)
+
+
+## 📁 Ubuntu server
+
+### 🧠 [Server Port Change](./ubuntu_server/server_port.md)
+
 ---
 
