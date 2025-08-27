@@ -36,6 +36,8 @@ This repository contains **installation, configuration, and uninstallation scrip
 
 ➡️ See: [`hardinfo/README.md`](./ubuntu_desktop/README.md)
 
+### 🧠 [Ram Monitor](./ubuntu_desktop/ram_monti.md)
+
 
 ## 📁 Ubuntu server
 
