@@ -2,6 +2,8 @@ Here's how to install **n8n** (a powerful open-source workflow automation tool) 
 
 ---
 
+#  Installation Workflow
+
 ## ✅ Option 1: Install via Docker (Recommended)
 
 ### 🔧 Prerequisites:
@@ -150,6 +152,78 @@ n8n will save data (workflows, credentials) in:
 ```
 
 You can backup/export this directory anytime.
+
+---
+
+
+
+
+
+
+
+
+#  Remove Workflow
+
+
+### 🔹 1. Remove Workflow via n8n Editor UI
+
+1. Run n8n:
+
+   ```bash
+   n8n
+   ```
+
+   (or `n8n start` if you set it up as a service).
+2. Open **[http://localhost:5678](http://localhost:5678)** in your browser.
+3. Go to the **Workflows** tab (left sidebar).
+4. Find the workflow → click **⋮ (three dots)** → **Delete**.
+5. Confirm deletion.
+
+---
+
+### 🔹 2. Remove Workflow via Command Line (if UI not working)
+
+Since you installed with npm, workflows are stored in an SQLite DB in your home folder:
+
+* Location:
+
+  ```
+  ~/.n8n/database.sqlite
+  ```
+
+To delete a workflow manually:
+
+1. Install SQLite CLI (if not installed):
+
+   ```bash
+   sudo apt-get install sqlite3 -y   # Ubuntu/Debian
+   ```
+2. Open the database:
+
+   ```bash
+   sqlite3 ~/.n8n/database.sqlite
+   ```
+3. List all workflows:
+
+   ```sql
+   SELECT id, name FROM workflow_entity;
+   ```
+4. Delete a workflow by ID:
+
+   ```sql
+   DELETE FROM workflow_entity WHERE id = 3;
+   ```
+5. Exit SQLite:
+
+   ```sql
+   .quit
+   ```
+
+Restart n8n:
+
+```bash
+n8n
+```
 
 ---
 
