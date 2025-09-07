@@ -44,5 +44,6 @@ This repository contains **installation, configuration, and uninstallation scrip
 #### 1.[`Server Port Change`](./ubuntu_server/server_port.md)
 #### 2.[`N8N workflow`](./ubuntu_server/n8n.md)
 #### 3.[`NPM global`](./ubuntu_server/npm.md)
+#### 4.[`Memory CMD`](./ubuntu_server/memory.md)
 ---
 
