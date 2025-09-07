@@ -2,7 +2,7 @@ Here's how to install **n8n** (a powerful open-source workflow automation tool) 
 
 ---
 
-#  Installation Workflow
+#  1. Installation Workflow
 
 ## ✅ Option 1: Install via Docker (Recommended)
 
@@ -162,7 +162,7 @@ You can backup/export this directory anytime.
 
 
 
-#  Remove Workflow
+# 2. Remove Workflow
 
 
 ### 🔹 1. Remove Workflow via n8n Editor UI
@@ -238,4 +238,169 @@ n8n
 
 ---
 
+
+
+
+
+
+
+# 3. HTTPS Run
+
+Yes 👍 you’ll need to **generate SSL certificates** (`privkey.pem` and `fullchain.pem`) before n8n can run with HTTPS.
+There are two main ways:
+
+---
+
+## 🔹 1. **For Production (Free SSL from Let’s Encrypt)**
+
+If you have a **domain name** pointing to your server (e.g., `n8n.example.com`):
+
+1. Install **Certbot** (Let’s Encrypt client):
+
+   ```bash
+   sudo apt update
+   sudo apt install certbot
+   ```
+
+2. Run Certbot to get certificates:
+
+   ```bash
+   sudo certbot certonly --standalone -d n8n.example.com
+   ```
+
+   This will create cert files in:
+
+   ```
+   /etc/letsencrypt/live/n8n.example.com/privkey.pem
+   /etc/letsencrypt/live/n8n.example.com/fullchain.pem
+   ```
+
+3. Point n8n env variables to them:
+
+   ```bash
+   export N8N_PROTOCOL=https
+   export N8N_SSL_KEY=/etc/letsencrypt/live/n8n.example.com/privkey.pem
+   export N8N_SSL_CERT=/etc/letsencrypt/live/n8n.example.com/fullchain.pem
+   n8n start
+   ```
+
+   👉 Now you can open `https://n8n.example.com`
+
+⚡ These certs auto-renew with `certbot renew`.
+
+---
+
+## 🔹 2. **For Local / Testing (Self-Signed Certificate)**
+
+If you don’t have a domain:
+
+1. Generate a self-signed cert:
+
+   ```bash
+   mkdir ~/certs
+   openssl req -x509 -nodes -days 365 \
+     -newkey rsa:2048 \
+     -keyout ~/certs/privkey.pem \
+     -out ~/certs/fullchain.pem
+   ```
+
+   (Just press Enter or fill info when asked.)
+
+2. Run n8n with:
+
+   ```bash
+   export N8N_PORT=8443
+   export N8N_PROTOCOL=https
+   export N8N_SSL_KEY=~/certs/privkey.pem
+   export N8N_SSL_CERT=~/certs/fullchain.pem
+   export WEBHOOK_URL=https://localhost:5678 (domain)
+   n8n start
+   ```
+
+3. Open in browser: `https://localhost:5678`
+   (Browser will show *“Not Secure”* warning because it’s self-signed — safe for testing only.)
+
+---
+
+
+
+# 4. N8N telegram map with ngrock
+
+Perfect 🚀 — using **ngrok** is the fastest way to get n8n’s Telegram Trigger working without buying a domain.
+
+Here’s how to set it up:
+
+---
+
+## 🔹 1. Install ngrok
+
+If you don’t have it already:
+
+```bash
+# Download ngrok (Linux example)
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-stable-linux-amd64.zip
+unzip ngrok-stable-linux-amd64.zip
+sudo mv ngrok /usr/local/bin/
+
+# Authenticate with your ngrok account
+ngrok config add-authtoken <YOUR_NGROK_AUTHTOKEN>
+```
+
+---
+
+## 🔹 2. Run n8n on HTTPS (port 8443)
+
+Start n8n normally:
+
+```bash
+export N8N_PORT=8443
+export N8N_PROTOCOL=https
+export N8N_SSL_KEY=/certs/privkey.pem
+export N8N_SSL_CERT=/certs/fullchain.pem
+n8n start
+```
+
+---
+
+## 🔹 3. Start ngrok Tunnel
+
+Run:
+
+```bash
+ngrok http 8443
+```
+
+ngrok will give you a public HTTPS URL like:
+
+```
+Forwarding    https://abcd1234.ngrok.io -> https://localhost:8443
+```
+
+## 🔹 4. Stop n8n server
+
+```bash
+ctrl + c (n8n server stop)
+```
+
+---
+
+## 🔹 5. Update n8n `WEBHOOK_URL`
+
+Now tell n8n to use this ngrok URL:
+
+```bash
+export WEBHOOK_URL=https://abcd1234.ngrok.io/
+n8n start
+```
+
+(If you’re using Docker, pass it with `-e WEBHOOK_URL=https://abcd1234.ngrok.io/`)
+
+---
+
+## 🔹 6. Re-run Telegram Trigger
+
+* n8n will register the webhook with Telegram using the ngrok URL.
+* Telegram can now send updates to your local n8n instance 🎉
+
+---
 
