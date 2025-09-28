@@ -46,5 +46,6 @@ This repository contains **installation, configuration, and uninstallation scrip
 #### 3.[`NPM global`](./ubuntu_server/npm.md)
 #### 4.[`Memory CMD`](./ubuntu_server/memory.md)
 #### 4.[`FileSystem`](./ubuntu_server/file_system.md)
+#### 5.[`server wakeup`](./ubuntu_server/server_wakeup.md)
 ---
 
