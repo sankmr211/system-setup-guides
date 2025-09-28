@@ -1,6 +1,6 @@
 # Wake-on-LAN (WOL) Setup and Remote Wake Documentation
 
-This document explains how to enable **Wake-on-LAN (WOL)** on an Ubuntu Server, make it persistent across reboots, and wake it up remotely from a Windows PC.
+This document explains how to enable **Wake-on-LAN (WOL)** on an Ubuntu Server, make it persistent across reboots, and wake it up remotely from a Windows, liunx and Mobile Apps.
 
 ---
 
