@@ -1,8 +1,3 @@
-Awesome 🚀 glad it’s working!
-Here’s a **complete documentation in Markdown (MD) format** that you can keep as a reference. It covers **Ubuntu server setup**, **systemd startup service**, and **remote wakeup from Windows**.
-
----
-
 # Wake-on-LAN (WOL) Setup and Remote Wake Documentation
 
 This document explains how to enable **Wake-on-LAN (WOL)** on an Ubuntu Server, make it persistent across reboots, and wake it up remotely from a Windows PC.
