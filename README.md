@@ -47,5 +47,6 @@ This repository contains **installation, configuration, and uninstallation scrip
 #### 4.[`Memory CMD`](./ubuntu_server/memory.md)
 #### 4.[`FileSystem`](./ubuntu_server/file_system.md)
 #### 5.[`server wakeup`](./ubuntu_server/server_wakeup.md)
+#### 5.[`after Install os required software`](./ubuntu_server/After_os_install.md)
 ---
 
