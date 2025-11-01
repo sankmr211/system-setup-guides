@@ -322,85 +322,13 @@ If you don’t have a domain:
 
 ---
 
+# 4. Public Access & Integrations
 
+For external webhook integrations (e.g., **Telegram**, **Discord**, or other APIs**), you can expose your local n8n server securely.
 
-# 4. N8N telegram map with ngrock
+### 📡 Expose n8n Publicly via ngrok  
+➡️ [See full guide → `ngrok.md`](./ngrok.md)
 
-Perfect 🚀 — using **ngrok** is the fastest way to get n8n’s Telegram Trigger working without buying a domain.
-
-Here’s how to set it up:
-
----
-
-## 🔹 1. Install ngrok
-
-If you don’t have it already:
-
-```bash
-# Download ngrok (Linux example)
-wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-stable-linux-amd64.zip
-unzip ngrok-stable-linux-amd64.zip
-sudo mv ngrok /usr/local/bin/
-
-# Authenticate with your ngrok account
-ngrok config add-authtoken <YOUR_NGROK_AUTHTOKEN>
-```
-
----
-
-## 🔹 2. Run n8n on HTTPS (port 8443)
-
-Start n8n normally:
-
-```bash
-export N8N_PORT=8443
-export N8N_PROTOCOL=https
-export N8N_SSL_KEY=/certs/privkey.pem
-export N8N_SSL_CERT=/certs/fullchain.pem
-n8n start
-```
-
----
-
-## 🔹 3. Start ngrok Tunnel
-
-Run:
-
-```bash
-ngrok http 8443
-```
-
-ngrok will give you a public HTTPS URL like:
-
-```
-Forwarding    https://abcd1234.ngrok.io -> https://localhost:8443
-```
-
-## 🔹 4. Stop n8n server
-
-```bash
-ctrl + c (n8n server stop)
-```
-
----
-
-## 🔹 5. Update n8n `WEBHOOK_URL`
-
-Now tell n8n to use this ngrok URL:
-
-```bash
-export WEBHOOK_URL=https://abcd1234.ngrok.io/
-n8n start
-```
-
-(If you’re using Docker, pass it with `-e WEBHOOK_URL=https://abcd1234.ngrok.io/`)
-
----
-
-## 🔹 6. Re-run Telegram Trigger
-
-* n8n will register the webhook with Telegram using the ngrok URL.
-* Telegram can now send updates to your local n8n instance 🎉
-
----
+### 🤖 Connect Telegram Bot with n8n  
+➡️ [See full guide → `telegram.md`](./telegram.md)
 

@@ -99,7 +99,7 @@ Modify default port configurations safely and persistently.
 
 ### 🧩 N8N Workflow
 Automated setup for **N8N**, the open-source workflow automation tool.  
-📄 [`ubuntu_server/n8n.md`](./ubuntu_server/n8n.md)
+📄 [`ubuntu_server/n8n/n8n.md`](./ubuntu_server/n8n/n8n.md)
 
 ---
 
