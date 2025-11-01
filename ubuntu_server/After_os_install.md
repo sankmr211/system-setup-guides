@@ -265,6 +265,8 @@ ip a
 sudo nano /etc/netplan/01-netcfg.yaml
 ```
 
+copy and paste below the code
+
 ```yaml
 network:
   version: 2
@@ -323,6 +325,12 @@ nmcli device wifi list
 sudo nmcli device wifi connect "<SSID>" password "<password>" ifname <wifi_interface_name>
 ```
 
+**Saved Wi-Fi:**
+
+```bash
+sudo nmcli connection <up | down>  "<SSID>"
+```
+
 **Check connection:**
 
 ```bash
@@ -331,12 +339,20 @@ nmcli connection show --active
 ip a show <wifi_interface_name>
 ```
 
-**Reconnect / Autoconnect:**
+**Reconnect / Disconnect:**
 
 ```bash
 nmcli device disconnect <wifi_interface_name>
 nmcli device connect <wifi_interface_name>
-nmcli connection modify "<SSID>" connection.autoconnect yes
+```
+
+
+**Autoconnect:**
+
+```bash
+nmcli -f NAME,AUTOCONNECT connection show
+nmcli connection show "<SSID>" | grep autoconnect
+sudo nmcli connection modify "<SSID>" connection.autoconnect <yes | no>
 ```
 
 ---
