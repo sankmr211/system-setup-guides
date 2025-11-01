@@ -22,7 +22,7 @@ Each service includes a dedicated setup script, detailed documentation, and clea
   - [🗂️ File System Tools](#-file-system-tools)
   - [🌅 Server Wakeup Automation](#-server-wakeup-automation)
   - [🚀 Post-Install Essentials](#-post-install-essentials)
-  - [🚀 Install Nodejs & NVM](#-install-nodejs-&-nvm)
+  - [🚀 Install Nodejs](#-install-nodejs)
   - [🚀 Install Python Pyenv](#-Install-Python-Pyenv)
 - [License](#-license)
 
