@@ -22,6 +22,8 @@ Each service includes a dedicated setup script, detailed documentation, and clea
   - [🗂️ File System Tools](#-file-system-tools)
   - [🌅 Server Wakeup Automation](#-server-wakeup-automation)
   - [🚀 Post-Install Essentials](#-post-install-essentials)
+  - [🚀 Install Nodejs & NVM](#-Install-Nodejs-&-NVM)
+  - [🚀 Install Python Pyenv](#-Install-Python-Pyenv)
 - [License](#-license)
 
 ---
@@ -130,6 +132,18 @@ Automates system startup and scheduled wake-on-LAN setups.
 ### 🚀 Post-Install Essentials
 A curated script to install **core software** required after a fresh OS setup.  
 📄 [`ubuntu_server/After_os_install.md`](./ubuntu_server/After_os_install.md)
+
+---
+
+### 🚀 Install Nodejs & NVM 
+Install Node 18 and install nvm for manage version.  
+📄 [`ubuntu_server/programming/node.md`](./ubuntu_server/programming/node.md)
+
+---
+
+### 🚀 Install Python Pyenv 
+Install Node 18 and install nvm for manage version.  
+📄 [`ubuntu_server/programming/python.md`](./ubuntu_server/programming/python.md)
 
 ---
 
