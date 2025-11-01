@@ -22,7 +22,7 @@ Each service includes a dedicated setup script, detailed documentation, and clea
   - [🗂️ File System Tools](#-file-system-tools)
   - [🌅 Server Wakeup Automation](#-server-wakeup-automation)
   - [🚀 Post-Install Essentials](#-post-install-essentials)
-  - [🚀 Install Nodejs](#-Install-nodejs)
+  - [🚀 Install Nodejs ](#-Install-Nodejs-and-NVM)
   - [🚀 Install Python Pyenv](#-Install-Python-Pyenv)
 - [License](#-license)
 
@@ -135,7 +135,7 @@ A curated script to install **core software** required after a fresh OS setup.
 
 ---
 
-### 🚀 Install Nodejs & NVM 
+### 🚀 Install Nodejs and NVM 
 Install Node 18 and install nvm for manage version.  
 📄 [`ubuntu_server/programming/node.md`](./ubuntu_server/programming/node.md)
 
