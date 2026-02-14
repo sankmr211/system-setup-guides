@@ -24,6 +24,8 @@ Each service includes a dedicated setup script, detailed documentation, and clea
   - [🚀 Post-Install Essentials](#-post-install-essentials)
   - [🚀 Install Nodejs and NVM](#-Install-Nodejs-and-NVM)
   - [🚀 Install Python Pyenv](#-Install-Python-Pyenv)
+- [Ubuntu Desktop and Server](#-ubuntu-desktop-and-server)
+  - [🚀 Install Python Pyenv](#-Install-Python-Pyenv)
 - [License](#-license)
 
 ---
@@ -146,6 +148,16 @@ Install Node 18 and install nvm for manage version.
 📄 [`ubuntu_server/programming/python.md`](./ubuntu_server/programming/python.md)
 
 ---
+
+## 🚀 Ubuntu Desktop and Server
+
+### ⚙️ Stop Unnecessary Services + Enable Audit Logging  
+Stop unused services safely to free RAM/CPU without affecting Desktop OS and configure `auditd` to maintain audit logs with timestamp entries.  
+📄 [`ubuntu_desktop_server/system_audit.md`](./ubuntu_desktop_server/system_audit.md)
+
+---
+
+
 
 ## 🧾 License
 
