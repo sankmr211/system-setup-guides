@@ -3,6 +3,35 @@
 2. **Don’t break Desktop OS**
 3. Enable **audit logging with timestamp** (for tracking who did what + when)
 
+
+To check **unwanted services running** using `systemctl`, you can use these commands 👇
+
+## 1. Check the list of the Service
+---
+
+### 1. List all running services
+
+```bash
+systemctl list-units --type=service --state=running
+```
+
+This shows only services currently running.
+
+---
+
+### 2. Check all enabled services (auto-start on boot)
+
+```bash
+systemctl list-unit-files --type=service --state=enabled
+```
+
+If any unwanted service is enabled, it will start automatically after reboot.
+
+---
+
+## 2. Manage the services
+
+
 ### 1. If you don’t use printers
 
 ```bash
